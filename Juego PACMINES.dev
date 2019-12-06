@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
-UnitCount=3
+UnitCount=2
 
 [VersionInfo]
 Major=1
@@ -60,8 +60,8 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit2]
-FileName=funcionespm.h
+[Unit3]
+FileName=funcionespacmines.h
 CompileCpp=0
 Folder=
 Compile=1
@@ -70,7 +70,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit3]
+[Unit2]
 FileName=funcionespacmines.h
 CompileCpp=0
 Folder=

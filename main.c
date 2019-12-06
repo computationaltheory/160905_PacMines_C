@@ -6,7 +6,7 @@
 #include<windows.h>
 #include<ctype.h>
 #include "funcionespacmines.h"
-int u=1;
+int u=1,g;
 main()
 {
 	char nombres[50];
@@ -14,12 +14,39 @@ main()
 	int menu;
 	system("color 17");
 	gotoxy(20,1);
-	printf("Universidad Politecnica de San Luis potosi\n Gabriel Gonzalez Orocio \n 160905\n Teoría Computacional");
+	printf("Universidad Politecnica de San Luis potosi\n Gabriel Gonzalez Orocio \n 160905\n TeorIa Computacional");
 	Sleep(1000);
 	system("cls");
 	system("color 47");
 	gotoxy(33,10);
 	printf("Bienvenido");
+	for(g=0;g<100;g++)
+	{
+		system("cls");
+		if(g<33){
+			gotoxy(33,10);
+			printf("Ready");	
+		}
+		if(g==33){
+			gotoxy(34,10);
+			printf("eady");	
+		}
+		if(g==34){
+			gotoxy(35,10);
+			printf("ady");	
+		}
+		if(g==35){
+			gotoxy(36,10);
+			printf("dy");	
+		}
+		if(g==36){
+			gotoxy(37,10);
+			printf("y");	
+		}
+		gotoxy(0+g,10);
+		printf("<");
+		Sleep(100);
+	}
 	Sleep(500);
 	system("cls");
 	srand(time(NULL));
@@ -54,8 +81,8 @@ main()
 				{
 					registro(nombres);
 					u+=1;
-					//int aleatorio=1+rand()%5;//elige el aleatorio para saber que mapa te toca
-					int aleatorio=5;
+					int aleatorio=1+rand()%5;//elige el aleatorio para saber que mapa te toca
+					//int aleatorio=5;
 					switch(aleatorio)
 					{
 						case 1:jugar1(nombres);

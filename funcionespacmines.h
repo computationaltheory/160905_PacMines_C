@@ -20,17 +20,19 @@ void gotoxy(int x,int y){
 {
 	system("cls");
 	gotoxy(33,10);
-	printf("Las reglas son:");
+	printf("The rules are:");
 	Sleep(1000);
 	system("cls");
 	gotoxy(1,1);
-	printf("1.-Para desplazarse, se elegira la posicion en base al renglon y la columna por medio de las teclas W(arriba)A(izquierda)x(abajo)D(derecha)");
+	printf("1.-To move, the position will be chosen based on the row and column by means of the keys W (up) A (left) x (down) D (right)");
     gotoxy(1,3);
-	printf("2.-No puede desplazarse si existe una pared de por medio");	
+	printf("2.-You cannot move if there is a wall in between");	
 	gotoxy(1,5);
-	printf("3.-Cada movimiento se registra,cada ficha amarilla vale 1 punto");	
+	printf("3.-Each movement is registered, each gift is worth 1 point");	
 	gotoxy(1,7);
-	printf("4.-Si topa con pared en dos ocasiones el juego termina.\n\n\n\n\n\n\n\n");
+	printf("4.-If you run into a mine three times the game ends.");
+	gotoxy(1,9);
+	printf("5.-If there is a number it means that around it, in some adjacent position there is a mine.\n\n\n\n\n\n\n\n");
 	system("pause");//se pausa hasta recibir una tecla
 }
 int registro(char nombres[50])
@@ -40,7 +42,7 @@ int registro(char nombres[50])
 		v=0;
 	system("cls");
 	gotoxy(33,10);
-	printf("Dame tu nombre\n");
+	printf("Give me your name:\n");
 	fflush(stdin);//limpia para recibir el nombre
 	gotoxy(33,11);
 	gets(nombres);
@@ -172,7 +174,7 @@ void jugar1(char nombres[50])
 				{	
 					if(obstaculo[g].x-7>5&&obstaculo[g].x-7<68){
 						
-						gotoxy(obstaculo[g].x,obstaculo[g].y);
+						gotoxy(obstaculo[g].x-7,obstaculo[g].y);
 						printf("1");
 					}	
 				}
@@ -306,7 +308,7 @@ void jugar2(char nombres[50])
 				{	
 					if(obstaculo[g].x-7>5&&obstaculo[g].x-7<68){
 						
-						gotoxy(obstaculo[g].x,obstaculo[g].y);
+						gotoxy(obstaculo[g].x-7,obstaculo[g].y);
 						printf("1");
 					}	
 				}
@@ -574,7 +576,7 @@ void jugar4(char nombres[50])
 				{	
 					if(obstaculo[g].x-7>5&&obstaculo[g].x-7<68){
 						
-						gotoxy(obstaculo[g].x,obstaculo[g].y);
+						gotoxy(obstaculo[g].x-7,obstaculo[g].y);
 						printf("1");
 					}	
 				}
